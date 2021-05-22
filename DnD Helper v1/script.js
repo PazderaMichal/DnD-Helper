@@ -1,19 +1,31 @@
 function weatherGen() {
     //* zjistíme, jaká je vybraná roční doba a podle toho vybereme seznam, ze kterého budeme generovat počasí
     let pastWeather = [];
+    if(pastWeather.length){
+        console.log('nefachá to')
+    } else {
+        console.log('fachá to')
+        
+    }
     //pastWeather = JSON.stringify(localStorage.getItem('pastWeather'))
     const seasonType = document.getElementById('season-type');
+    console.log(pastWeather.length)
     console.log(localStorage.getItem('pastWeather'))
-    if (localStorage.getItem('pastWeather') !== 'undefined') {
-
-        pastWeather = JSON.parse(localStorage.getItem('pastWeather'));
+    if (localStorage.getItem('pastWeather') !== null) {
+        if(localStorage.getItem('pastWeather') !== ('undefined')){
+            console.log('JSON')
+            pastWeather = JSON.parse(localStorage.getItem('pastWeather'));
+        }
+        
     } else {
-        pastWeather = []
+        console.log('push')
+
+        pastWeather.push('sunny')
+        //? pastWeather = []
     }
-    console.log('pastWeatherParts', pastWeather);
 
-    const weatherList = document.getElementById('weather-list'); // toto je lu element
 
+    const weatherList = document.getElementById('weather-list');
     for (i = 0; i < pastWeather.length; i++) {
         const weatherListElement = document.createElement('li');
         weatherListElement.append(pastWeather[i]);

@@ -1,0 +1,252 @@
+body{
+    --color-1: #b42f2b;
+    --color-2: #9ea8ad;
+    --color-3: #bac6cc;
+    --color-4: #ff868a;
+    --color-font: #2e2e2e;
+
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Vollkorn', sans-serif;
+    
+}
+
+header{
+    padding-left: 10px;
+    font-size: 30px;
+    text-align: left;
+    background-color: var(--color-3);
+    
+}
+
+main{
+    padding: 0 20px 0 20px;
+    background-color: var(--color-3);
+    color: var(--color-font);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+
+
+}
+
+a{
+    color: var(--color-1);
+}
+
+input[type="number"] {
+    border: none; 
+    font-family: inherit
+}
+
+
+h2{
+    font-size: 25px;
+}
+
+span{
+    background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0) 0,rgba(255, 255, 255, 0) 50%,
+    var(--color-4) 40%, var(--color-4) 85%, 
+    rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+    
+}
+
+img{
+   margin: 10px;
+   border: solid;
+   border-color: #161616;
+}
+button{
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    transition-duration: 0.4s;
+    outline: none;
+}
+.button{
+    color: #000;
+}
+.button:hover{
+    color: #EFEFEF;
+    background-color: #898989;
+    
+
+}
+
+.weather{
+    grid-row: 1/2;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+.weather-local-storage{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+.clear-button{
+    color: #000;
+    position: absolute;
+}
+.clear-button:hover{
+    color: #EFEFEF;
+    background-color: #757575;
+}
+
+.weather-inventory{
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: 130px;
+}
+
+.time{
+    padding-bottom: 10px;
+    grid-row: 2/3;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+.time-pahze-text{
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+.loot{
+    grid-row: 3/4;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+.ul-loot-list{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin: 0;
+    box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)
+}
+
+footer{
+    padding-top: 10px;
+    text-align: center;
+    background-color: var(--color-2);
+}
+
+@media only screen and (max-width: 750px){
+    body{
+        background-color: var(--color-3);
+    }
+    
+    header{
+        text-align: center;
+    }
+
+    h2{
+        margin: 10px 0 10px 0;
+    }
+
+    main{
+        text-align: center;
+        padding: 0;
+        background-color: var(--color-3);
+        color: var(--color-font);
+        display: inline;
+    }
+
+    .weather-local-storage{
+        display: flex;
+        justify-content: center;
+    }
+
+    .weather-inventory{
+        margin-top: 45px;
+        display: table;
+        /*margin: 0 45px 0 0;*/
+        /*padding: 0 0 0 240px;*/
+
+        text-align: left;
+    }
+
+    .clear-button{
+        text-align: center;
+        color: #000;
+        /*position: static;*/
+        
+        margin: 10px 0;
+    }
+
+    .time{
+        box-shadow: none;
+    }
+
+    .time-pahze-text{
+        text-align: center;
+    }
+
+    .loot{
+        box-shadow: none;
+    }
+
+    .loot-inventory{
+        text-align: left;
+        /*list-style-position: inside;*/
+
+        /*grid-row: 3/4;
+        grid-column: 2/3;
+        margin: 0;
+        box-shadow: 0 8px 6px -6px rgba(155, 155, 155, 0.555)*/
+
+    }
+    .ul-loot-list{
+        display: flex;
+        justify-content: center;
+    }
+
+/*
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto 1fr 60px 1fr auto;
+    }
+
+    .weather{
+        grid-row: 1/2;
+    }
+
+    .weather-local-storage{
+        grid-row: 2/3;
+    
+    }
+    
+    .weather-inventory{
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: column;
+        grid-auto-columns: 130px;
+    }
+    
+    .time{
+        grid-row: 3/4;
+    }
+    
+    .time-pahze-text{
+        grid-row: 4/5;
+        text-align: left;
+    }
+    
+    .loot{
+        grid-row: 5/6;
+    }
+    
+    .loot-inventory{
+        grid-row: 6/7;
+    }
+*/
+}

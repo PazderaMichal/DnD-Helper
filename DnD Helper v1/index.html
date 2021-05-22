@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Vollkorn&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>DnD Helper</title>
+</head>
+<body>
+    <header>
+        DnD Helper
+    </header>
+    <main>
+        <div class="weather" id="weather-space">
+            <h2><span>Weather</span></h2>
+            <div id="season-type">
+                <input type="radio" id="summer" name="season">Summer
+                <input type="radio" id="spring-fall" name="season" checked>Spring/Fall
+                <input type="radio" id="winter" name="season"> Winter 
+            </div>
+            <div id="weather-list-area">
+                <button class="button" id="weather-button">Today's weather</button><br>
+                <img src="" alt="Weather icon picture" id="weather-icon" class="weather-icon-class"><br>
+            </div>
+
+        </div>
+
+        <div class="weather-local-storage">
+            <ul class="weather-inventory" id="weather-list"></ul><br>
+            <button class="clear-button" id="clearButton">Clear the list</button>
+            <!----> 
+        </div>
+        
+        <div class="time" id="time-space">
+            <h2><span>Time</span></h2>
+            <img src="" alt="Picture with sun/moon, showing daytime/nighttime" class="ilustration-picture" id="time-picture"><br>
+            <button class="button" id="last-time">Previous</button>
+            <button class="button" id="new-time">Next</button><br>
+            <div class="time-pointer" id="time-pointer"></div>
+        </div>
+        <div class="time-pahze-text" id="time-phaze-text"></div>
+
+        <div class="loot" id="loot-gen">
+            <h2><span>Loot</span></h2>
+            <div class="loot-places">
+                <input type="checkbox" id="camp">Camp <br>
+                <input type="checkbox" id="dungeon">Dungeon <br>
+                <input type="checkbox" id="house">Town house <br>
+                <input type="checkbox" id="sea">Sea <br>
+            </div>
+            <input type="number" id="loot-counter" value="1" min="1" max="20">
+            <button class="button" id="loot-button">Generate!</button>
+        </div>
+        <div class="ul-loot-list">
+            <ul class="loot-inventory" id="loot-list"></ul>
+        </div>    
+       
+    </main>
+    <footer>
+        Need help? Wanna contact me?<br>
+        Email: rotterham@gmail.com <br>
+        Instagram: <a href="https://www.instagram.com/_rotterham/" target="_blank">rotterham</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
